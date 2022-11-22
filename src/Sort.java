@@ -35,7 +35,7 @@ public class Sort {
             } else if (files[i].getName().contains("WP")) {
                 folderSelection = "Wheelplate";
             }
-           // copyToAeroSingle(files[i], folderSelection);
+            copyToAeroSingle(files[i], folderSelection);
             copyToDropBox(files[i], folderSelection);
             System.out.println("Copied " + files[i].getName());
            // GetSpreadsheetData.copySheet();
@@ -47,6 +47,8 @@ public class Sort {
     public void copyToDropBox(File shortenedFolderName, String dropBoxFolderName) throws IOException {
         File src = new File(shortenedFolderName.getPath() + "\\PostPro");
         File dstDropbox = new File("C:\\Users\\CFD2\\Dropbox\\PostPro\\" + PostProSorter.baseline +"\\" + dropBoxFolderName + "\\" + shortenedFolderName.getName() + "\\PostPro");
+        FileUtils.copyDirectory(src, dstDropbox);
+        src = new File(shortenedFolderName.getPath() + "\\STEP");
         FileUtils.copyDirectory(src, dstDropbox);
     }
 
