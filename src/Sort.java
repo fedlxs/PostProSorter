@@ -19,9 +19,9 @@ public class Sort {
         System.out.println("Running app... ");
         for (int i = 0; i < numberOfFolders; i++) {
             System.out.println(files[i].getPath());
-
-            copyToAeroSingle(files[i], folderSelector(files[i]));
-            copyToDropBox(files[i], folderSelector(files[i]));
+            String folderSelection = folderSelector(files[i]);
+            copyToAeroSingle(files[i], folderSelection);
+            copyToDropBox(files[i], folderSelection);
             System.out.println("Copied " + files[i].getName());
            // GetSpreadsheetData.copySheet();
 
@@ -52,7 +52,7 @@ public class Sort {
         File src = new File(shortenedFolderName.getPath() + "\\PostPro");
         File dstDropbox = new File("C:\\Users\\CFD2\\Dropbox\\PostPro\\" + PostProSorter.baseline +"\\" + dropBoxFolderName + "\\" + shortenedFolderName.getName() + "\\PostPro");
         FileUtils.copyDirectory(src, dstDropbox);
-        src = new File(shortenedFolderName.getPath() + "\\STEP");
+        src = new File("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\" + PostProSorter.baseline+"\\" + dropBoxFolderName+"\\" + shortenedFolderName.getName() + "\\STEP");
         FileUtils.copyDirectory(src, dstDropbox);
     }
 
