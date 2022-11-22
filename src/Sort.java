@@ -19,43 +19,27 @@ public class Sort {
         System.out.println("Running app... ");
         for (int i = 0; i < numberOfFolders; i++) {
             System.out.println(files[i].getPath());
+            String folderSelection = "";
             if (files[i].getName().contains("FW")) {
-                copyToAeroSingle(files[i], "Frontwing");
-                copyToDropBox(files[i], "Frontwing");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Frontwing";
             } else if (files[i].getName().contains("SW")) {
-                copyToAeroSingle(files[i], "Undertray");
-                copyToDropBox(files[i], "Undertray");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Undertray";
             } else if (files[i].getName().contains("RW")) {
-                copyToAeroSingle(files[i], "Rearwing");
-                copyToDropBox(files[i], "Rearwing");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Rearwing";
             } else if (files[i].getName().contains("D_")) {
-                copyToAeroSingle(files[i], "Diffusor");
-                copyToDropBox(files[i], "Diffusor");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Diffusor";
             } else if (files[i].getName().contains("N")) {
-                copyToAeroSingle(files[i], "Bodywork");
-                copyToDropBox(files[i], "Bodywork");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Bodywork";
             } else if (files[i].getName().contains("DT")) {
-                copyToAeroSingle(files[i], "Bodywork");
-                copyToDropBox(files[i], "Bodywork");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Bodywork";
             } else if (files[i].getName().contains("WP")) {
-                copyToAeroSingle(files[i], "Bodywork");
-                copyToDropBox(files[i], "Bodywork");
-                System.out.println("Copied " + files[i].getName());
-
+                folderSelection = "Wheelplate";
             }
+           // copyToAeroSingle(files[i], folderSelection);
+            copyToDropBox(files[i], folderSelection);
+            System.out.println("Copied " + files[i].getName());
            // GetSpreadsheetData.copySheet();
+
         }
 
     }
