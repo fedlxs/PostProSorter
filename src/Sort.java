@@ -19,29 +19,33 @@ public class Sort {
         System.out.println("Running app... ");
         for (int i = 0; i < numberOfFolders; i++) {
             System.out.println(files[i].getPath());
-            String folderSelection = "";
-            if (files[i].getName().contains("FW")) {
-                folderSelection = "Frontwing";
-            } else if (files[i].getName().contains("SW")) {
-                folderSelection = "Undertray";
-            } else if (files[i].getName().contains("RW")) {
-                folderSelection = "Rearwing";
-            } else if (files[i].getName().contains("D_")) {
-                folderSelection = "Diffusor";
-            } else if (files[i].getName().contains("N")) {
-                folderSelection = "Bodywork";
-            } else if (files[i].getName().contains("DT")) {
-                folderSelection = "Bodywork";
-            } else if (files[i].getName().contains("WP")) {
-                folderSelection = "Wheelplate";
-            }
-            copyToAeroSingle(files[i], folderSelection);
-            copyToDropBox(files[i], folderSelection);
+
+            copyToAeroSingle(files[i], folderSelector(files[i]));
+            copyToDropBox(files[i], folderSelector(files[i]));
             System.out.println("Copied " + files[i].getName());
            // GetSpreadsheetData.copySheet();
 
         }
 
+    }
+    public String folderSelector(File file){
+        String folderSelection = "";
+        if (file.getName().contains("FW")) {
+            folderSelection = "Frontwing";
+        } else if (file.getName().contains("SW")) {
+            folderSelection = "Undertray";
+        } else if (file.getName().contains("RW")) {
+            folderSelection = "Rearwing";
+        } else if (file.getName().contains("D_")) {
+            folderSelection = "Diffusor";
+        } else if (file.getName().contains("N")) {
+            folderSelection = "Bodywork";
+        } else if (file.getName().contains("DT")) {
+            folderSelection = "Bodywork";
+        } else if (file.getName().contains("WP")) {
+            folderSelection = "Wheelplate";
+        }
+    return folderSelection;
     }
 
     public void copyToDropBox(File shortenedFolderName, String dropBoxFolderName) throws IOException {
