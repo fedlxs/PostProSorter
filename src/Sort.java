@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import org.apache.commons.io.FileUtils;
 public class Sort {
-    public String defaultDirectory = "\\\\NAS2EC52B\\AeroSingle\\CFD\\PostProSortFolderTest";
+    public String defaultDirectory = "\\\\NAS2EC52B\\AeroSingle\\CFD\\PostProFolderTest";
     public File f1 = new File(defaultDirectory);
     public int numberOfFolders = f1.list().length;
     public File[] files = f1.listFiles();
@@ -53,6 +53,7 @@ public class Sort {
         File dstDropbox = new File("C:\\Users\\CFD2\\Dropbox\\PostPro\\" + PostProSorter.baseline +"\\" + dropBoxFolderName + "\\" + shortenedFolderName.getName() + "\\PostPro");
         FileUtils.copyDirectory(src, dstDropbox);
         src = new File("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\" + PostProSorter.baseline+"\\" + dropBoxFolderName+"\\" + shortenedFolderName.getName() + "\\STEP");
+        dstDropbox = new File("C:\\Users\\CFD2\\Dropbox\\PostPro\\" + PostProSorter.baseline +"\\" + dropBoxFolderName + "\\" + shortenedFolderName.getName() + "\\STEP");
         FileUtils.copyDirectory(src, dstDropbox);
     }
 
