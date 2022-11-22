@@ -7,7 +7,7 @@ import static java.nio.file.Path.of;
 
 public class GetSpreadsheetData {
     public static void copySheet(String destination) throws IOException {
-        Files.copy(Path.of("C:\\Users\\afedy\\Documents\\KA-Race.ing\\Copyfoldertest\\00_CopyFolder\\TesterWorksheet.xlsx"), Path.of(destination));
+        Files.copy(Path.of("\\\\NAS2EC52B\\AeroSingle\\CFD\\22E\\Baseline 3\\00_Copyfolder\\PostPro\\22E_B3_K_Postpro.xlsm"), Path.of("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\"+PostProSorter.baseline+"\\"+destination));
 
     }
 }
