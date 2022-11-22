@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import org.apache.commons.io.FileUtils;
 public class Sort {
-    public String defaultDirectory = "\\\\NAS2EC52B\\AeroSingle\\CFD\\PostProFolderTest";
+    public String defaultDirectory = "\\\\NAS2EC52B\\AeroSingle\\CFD\\PostProSortFolder";
     public File f1 = new File(defaultDirectory);
     public int numberOfFolders = f1.list().length;
     public File[] files = f1.listFiles();
