@@ -20,38 +20,38 @@ public class Sort {
         for (int i = 0; i < numberOfFolders; i++) {
             System.out.println(files[i].getPath());
             if (files[i].getName().contains("FW")) {
-                copyToDropBox(files[i], "Frontwing");
                 copyToAeroSingle(files[i], "Frontwing");
+                copyToDropBox(files[i], "Frontwing");
                 System.out.println("Copied " + files[i].getName());
 
             } else if (files[i].getName().contains("SW")) {
-                copyToDropBox(files[i], "Undertray");
                 copyToAeroSingle(files[i], "Undertray");
+                copyToDropBox(files[i], "Undertray");
                 System.out.println("Copied " + files[i].getName());
 
             } else if (files[i].getName().contains("RW")) {
-                copyToDropBox(files[i], "Rearwing");
                 copyToAeroSingle(files[i], "Rearwing");
+                copyToDropBox(files[i], "Rearwing");
                 System.out.println("Copied " + files[i].getName());
 
-            } else if (files[i].getName().contains("D")) {
-                copyToDropBox(files[i], "Diffusor");
+            } else if (files[i].getName().contains("D_")) {
                 copyToAeroSingle(files[i], "Diffusor");
+                copyToDropBox(files[i], "Diffusor");
                 System.out.println("Copied " + files[i].getName());
 
             } else if (files[i].getName().contains("N")) {
-                copyToDropBox(files[i], "Bodywork");
                 copyToAeroSingle(files[i], "Bodywork");
+                copyToDropBox(files[i], "Bodywork");
                 System.out.println("Copied " + files[i].getName());
 
             } else if (files[i].getName().contains("DT")) {
-                copyToDropBox(files[i], "Bodywork");
                 copyToAeroSingle(files[i], "Bodywork");
+                copyToDropBox(files[i], "Bodywork");
                 System.out.println("Copied " + files[i].getName());
 
             } else if (files[i].getName().contains("WP")) {
-                copyToDropBox(files[i], "Bodywork");
                 copyToAeroSingle(files[i], "Bodywork");
+                copyToDropBox(files[i], "Bodywork");
                 System.out.println("Copied " + files[i].getName());
 
             }
