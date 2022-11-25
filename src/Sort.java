@@ -17,13 +17,15 @@ public class Sort {
         String destination;
 
         System.out.println("Running app... ");
+        GetSpreadsheetData.createSheet();
         for (int i = 0; i < numberOfFolders; i++) {
             System.out.println(files[i].getPath());
             String folderSelection = folderSelector(files[i]);
+            GetSpreadsheetData.writeToPostProFile(files[i].getName());
             copyToAeroSingle(files[i], folderSelection);
             copyToDropBox(files[i], folderSelection);
             System.out.println("Copied " + files[i].getName());
-           // GetSpreadsheetData.copySheet();
+
 
         }
 
