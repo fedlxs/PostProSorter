@@ -14,7 +14,7 @@ public class GetSpreadsheetData {
     }
     public static void writeToPostProFile(String fileName) throws IOException {
         FileWriter editPostProFile = new FileWriter("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\"+PostProSorter.baseline+"\\PostProData.txt", true);
-    editPostProFile.write(fileName + ":  " + returnCl(fileName) + ", " +returnCd(fileName)+ ", " + returnEfficiency(fileName)  + ", "+returnCoP(fileName)+", " + returnBalance(fileName) +"\n");
+    editPostProFile.write(fileName + ":  " + returnCl(fileName) + ", " +returnCd(fileName)+ ", " + returnEfficiency(fileName)  + ", "+returnCoP(fileName)+", " + returnBalance(fileName) + ",     [[Paste Link Here|PostPro]]"+"\n");
     editPostProFile.close();
     }
 
