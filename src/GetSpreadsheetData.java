@@ -9,12 +9,12 @@ import static java.nio.file.Path.of;
 public class GetSpreadsheetData {
     public static void createSheet() throws IOException {
 
-        File postProData = new File("C:\\Users\\CFD2\\Documents\\Alex\\PostProData.txt");
+        File postProData = new File("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\"+PostProSorter.baseline+"\\PostProData.txt");
         postProData.createNewFile();
     }
     public static void writeToPostProFile(String fileName) throws IOException {
-        FileWriter editPostProFile = new FileWriter("C:\\Users\\CFD2\\Documents\\Alex\\PostProData.txt", true);
-    editPostProFile.write(fileName + ":  " + returnCl(fileName) + ", " +returnCd(fileName)+ ", " + returnEfficiency(fileName)  + ", "+returnCoP(fileName)+", " + returnBalance(fileName) + ", "+ returnCoPZ(fileName)+"\n");
+        FileWriter editPostProFile = new FileWriter("\\\\NAS2EC52B\\AeroSingle\\CFD\\"+PostProSorter.model+"\\"+PostProSorter.baseline+"\\PostProData.txt", true);
+    editPostProFile.write(fileName + ":  " + returnCl(fileName) + ", " +returnCd(fileName)+ ", " + returnEfficiency(fileName)  + ", "+returnCoP(fileName)+", " + returnBalance(fileName) +"\n");
     editPostProFile.close();
     }
 
