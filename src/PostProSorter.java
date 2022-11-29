@@ -9,8 +9,8 @@ public static String model = "22E";
 
       //  System.out.println("Please wait while we sort your shit :)");
 
-        // Sort sortingModule = new Sort();
-        //sortingModule.sort();
+         Sort sortingModule = new Sort();
+        sortingModule.sort();
         //System.out.println("Press Enter to close the program...");
         //try{
         // System.in.read();
